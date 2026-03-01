@@ -4,6 +4,9 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// credits to @MahdiNazmi for source code
+// github link: 
+
 class Signup extends StatelessWidget {
   Signup({super.key});
   final TextEditingController _emailController = TextEditingController();
@@ -60,7 +63,7 @@ class Signup extends StatelessWidget {
           'Email Address',
           style: GoogleFonts.raleway(
             textStyle: const TextStyle(
-              color: Colors.black,
+              color: Colors.green,
               fontWeight: FontWeight.normal,
               fontSize: 16
             )
@@ -71,7 +74,7 @@ class Signup extends StatelessWidget {
           controller: _emailController,
           decoration: InputDecoration(
             filled: true,
-            hintText: 'mahdiforwork@gmail.com',
+            hintText: 'test@.com',
             hintStyle: const TextStyle(
               color: Color(0xff6A6A6A),
               fontWeight: FontWeight.normal,
@@ -123,7 +126,7 @@ class Signup extends StatelessWidget {
   Widget _signup(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        backgroundColor: const Color(0xff0D6EFD),
+        backgroundColor: const Color.fromARGB(255, 13, 253, 153),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(14),
           ),
