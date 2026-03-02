@@ -1,56 +1,52 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-
 import '../home.dart';
 import '../login.dart';
 
 // credits to @MahdiNazmi for source code
-// github link: 
-class AuthService {
+// github link: https://github.com/mahdinazmi/Flutter-Firebase-Auth/commit/6169e61dbb827bbb82dbda0c45ea303558d08762
 
-  Future<void> signup({
-    required String email,
+class AuthService {
+   Future<void> signup({
+    required String email, 
     required String password,
     required BuildContext context
-  }) async {
-    
-    try {
+   }) async{
 
+  
+    try{
       await FirebaseAuth.instance.createUserWithEmailAndPassword(
-        email: email,
-        password: password
+         email: email, 
+         password: password
       );
-
       await Future.delayed(const Duration(seconds: 1));
       Navigator.pushReplacement(
-        context,
+        context, 
         MaterialPageRoute(
-          builder: (BuildContext context) => const Home()
+          builder: (BuildContext context)=> const Home ()
         )
       );
-      
-    } on FirebaseAuthException catch(e) {
+    } on FirebaseAuthException catch(e){
       String message = '';
-      if (e.code == 'weak-password') {
-        message = 'The password provided is too weak.';
-      } else if (e.code == 'email-already-in-use') {
-        message = 'An account already exists with that email.';
+      if(e.code == 'weak-password'){
+        message = 'The passowrd is too weak, Please try another one';
+      } else if (e.code == 'email-already-in-use'){
+        message = 'The email is already in use. Please try another one';
       }
-       Fluttertoast.showToast(
+      Fluttertoast.showToast(
         msg: message,
         toastLength: Toast.LENGTH_LONG,
         gravity: ToastGravity.SNACKBAR,
-        backgroundColor: Colors.black54,
+        backgroundColor: Colors.black,
         textColor: Colors.white,
-        fontSize: 14.0,
+        fontSize: 14.0, 
       );
     }
     catch(e){
     }
-  }
-
-  Future<void> signin({
+   }
+   Future<void> signin({
     required String email,
     required String password,
     required BuildContext context
@@ -90,7 +86,6 @@ class AuthService {
     catch(e){
     }
   }
-
   Future<void> signout({
     required BuildContext context
   }) async {
@@ -105,3 +100,4 @@ class AuthService {
       );
   }
 }
+  
