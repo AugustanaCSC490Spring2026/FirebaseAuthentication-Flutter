@@ -134,11 +134,14 @@ class Signup extends StatelessWidget {
           elevation: 0,
       ),
       onPressed: () async {
-       await AuthService().signup(
-          email: _emailController.text,
-          password: _passwordController.text,
+         await AuthService().signup(
+          email: _emailController.text, 
+          password: _passwordController.text, 
           context: context
         );
+
+        
+        
       },
       child: const Text("Sign Up"),
     );

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "867214932229",
+    "project_id": "tech-tutorial-c8a00",
+    "storage_bucket": "tech-tutorial-c8a00.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:867214932229:android:7f37d5e28994ae3c281f6c",
+        "android_client_info": {
+          "package_name": "com.example.authenticatorapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgV2qFhYo_-gCjeSmpB5RgZMFjVAnnmXI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:867214932229:android:bde60e3f74b71591281f6c",
+        "android_client_info": {
+          "package_name": "com.example.flutter_tech_tutorial"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgV2qFhYo_-gCjeSmpB5RgZMFjVAnnmXI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
