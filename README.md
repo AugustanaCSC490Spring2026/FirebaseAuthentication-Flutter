@@ -4,9 +4,9 @@ This project demonstrates how to implement Firebase Authentication in a Flutter 
 The project uses the Flutter packages firebase_core and firebase_auth to integrate Firebase services and securely manage user authentication.
 
 Features -
-User sign-up with email and password
-User login authentication
-Firebase project configuration using FlutterFire
+User sign-up with email and password,
+User login authentication,
+Firebase project configuration using FlutterFire,
 Basic authentication state handling
 
 Credits -
